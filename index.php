@@ -9,8 +9,8 @@
 
     <body>
         <script>
-            window.alert("Olá, mundo")
-            window.confirm("Conseguiu entender?")
+            //window.alert("Olá, mundo")
+            //window.confirm("Conseguiu entender?")
             window.prompt("Qual seu nome?")
         </script>
     </body>
