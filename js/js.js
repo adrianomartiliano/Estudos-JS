@@ -12,7 +12,7 @@ function idade(){
 
     var idadefinal = anoatual - anonasci;
     alert("Sua idade é "+idadefinal)
-}*/
+}
 function calc(){
     var n1 = prompt("Informe o primeiro número");
     var op = prompt("Infome o sinal da operação (+ - / *)");
@@ -41,4 +41,14 @@ function calc(){
         var resultado = n1 * n2;
         alert("A multiplicaçao entre "+n1+" e "+n2+" = "+resultado);
     }
-} 
+}*/
+
+function objeto(){
+    var pessoa = {
+        'nome':'Adriano',
+        'idade':29,
+        'cidade':'Londrina'
+    }
+    alert (pessoa.idade);
+
+}
