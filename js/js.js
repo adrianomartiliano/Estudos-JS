@@ -41,7 +41,7 @@ function calc(){
         var resultado = n1 * n2;
         alert("A multiplicaçao entre "+n1+" e "+n2+" = "+resultado);
     }
-}*/
+}
 
 function objeto(){
     var pessoa = {
@@ -52,3 +52,13 @@ function objeto(){
     alert (pessoa.idade);
 
 }
+*/
+class Animal{
+    constructor() {
+        this.nome = "Cachorro";
+    }
+}
+
+animal = new Animal();
+
+alert(animal.nome);
