@@ -52,7 +52,7 @@ function objeto(){
     alert (pessoa.idade);
 
 }
-*/
+
 class Animal{
     constructor() {
         this.nome = "Cachorro";
@@ -61,4 +61,9 @@ class Animal{
 
 animal = new Animal();
 
-alert(animal.nome);
+alert(animal.nome);*/
+
+function data(){
+    var data = new Date();
+    alert(data);
+}
