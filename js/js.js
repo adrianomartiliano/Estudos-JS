@@ -66,7 +66,26 @@ alert(animal.nome);
 function data(){
     var data = new Date();
     alert(data);
-}*/
+}
 
 var p = document.getElementsByTagName('p');
 p[1].innerHTML = 'Manipulado com sucesso!';
+var el = document.getElementById('teste');
+el.style.color = 'red';*/
+
+var elementos = document.getElementsByClassName('box');
+
+for (var i = 0; i<elementos.length; i++){
+    elementos[i].style.width = '100px';
+    elementos[i].style.height = '100px';
+    elementos[i].style.marginBottom = '20px';
+    if (i == 0){
+        elementos[i].style.backgroundColor = 'red';
+    }else if (i == 1){
+        elementos[i].style.backgroundColor = 'black';
+    }else if (i == 2){
+        elementos[i].style.backgroundColor = 'yellow';
+    } else {
+        elementos[i].style.backgroundColor = 'green';
+    }
+}
