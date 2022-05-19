@@ -61,9 +61,12 @@ class Animal{
 
 animal = new Animal();
 
-alert(animal.nome);*/
+alert(animal.nome);
 
 function data(){
     var data = new Date();
     alert(data);
-}
+}*/
+
+var p = document.getElementsByTagName('p');
+p[1].innerHTML = 'Manipulado com sucesso!';
