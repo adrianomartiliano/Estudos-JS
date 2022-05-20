@@ -89,3 +89,8 @@ for (var i = 0; i<elementos.length; i++){
         elementos[i].style.backgroundColor = 'green';
     }
 }
+
+var box = elementos[1];
+box.addEventListener('click', ()=>{
+    box.classList.add('animacao');
+})
