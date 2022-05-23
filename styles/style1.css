@@ -5,3 +5,16 @@
     background-color: red;
     border: 1px solid black;
 }
+
+.conteudo h2 span{
+    font-size: 10px;
+    cursor: pointer;
+}
+.conteudo p {
+    overflow: hidden;
+    height: 15px;
+    transition: 1s;
+}
+.mostrar {
+    height: 200px !important;
+}
