@@ -1,20 +1,23 @@
+/*
+#1c1c1c - black
+#474350 - Purple (cinza claro)
+#ffc857 - Amarelo (mustaf)
+#f4f7f5 - White
+
+*/
+
 #menu{
-    width:453px;
+    width:553px;
     margin: 0 auto;
 }
 
 #menu li:hover {
-    background:#800;
+    background:#ffc857;
+    color: #1c1c1c;
+    transition: 0.5s;
 }
-
-#menu ul {
-    list-style:none;
-    background:#888;
-    padding:0px;
-    margin:0px;
-}
-
-#menu li {
+#menu ul a li {
+    background-color: #1c1c1c;
     height:47px;
     display:table-cell;
     text-align:center;
@@ -23,7 +26,7 @@
     border-right:1px solid #FFF;
 }
 
-#menu ul li a{
+a{
     text-decoration:none;
     font-size:20px;
     color:#FFF;
