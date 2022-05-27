@@ -1,21 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.corpo {
+    width: 900px;
+    margin: 0 auto;
+}
+.blocos{
+    border: 1px solid black;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.btn-ver-mais{
+    color: blue;
+    margin-left: 50px;
+    cursor: pointer;
+    font-size: 15px;
+}
 .animacao{
     transition: 5s;
-    margin-left: 100px;
     margin-top: 100px;
     background-color: red;
     border: 1px solid black;
 }
-
-.conteudo h2 span{
-    font-size: 10px;
-    cursor: pointer;
+#bloco1{
+    overflow: hidden;
+    height: 15px;
+}
+.blocos .box{
+    float: right;
+}
+#bloco1 p{
+    width: 300px;
+}
+.blocos h2 {
+    margin-bottom: 40px;
 }
 .conteudo p {
     overflow: hidden;
     height: 15px;
     transition: 0.5s;
-    width: 600px;
+    margin-top: 30px;
 }
-.mostrar {
-    height: 200px !important;
+.mostrar1{
+    height: 100% !important; 
+}
+.mostrar2 {
+    height: 80px !important;
 }

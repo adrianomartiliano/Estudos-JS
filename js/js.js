@@ -72,39 +72,58 @@ var p = document.getElementsByTagName('p');
 p[1].innerHTML = 'Manipulado com sucesso!';
 var el = document.getElementById('teste');
 el.style.color = 'red';
+[]*/
 
+//ANIMAÇÃO 1
 var elementos = document.getElementsByClassName('box');
+var anim1 = document.querySelector('.blocos span');
+anim1.addEventListener('click', function(){
 
-for (var i = 0; i<elementos.length; i++){
-    elementos[i].style.width = '100px';
-    elementos[i].style.height = '100px';
-    elementos[i].style.marginBottom = '20px';
-    if (i == 0){
-        elementos[i].style.backgroundColor = 'red';
-    }else if (i == 1){
-        elementos[i].style.backgroundColor = 'black';
-    }else if (i == 2){
-        elementos[i].style.backgroundColor = 'yellow';
-    } else {
-        elementos[i].style.backgroundColor = 'green';
-    }
-}
+    var anim1cont = document.getElementById ('bloco1');
+    if (anim1cont.classList.contains('mostrar1')){
+        anim1.innerHTML = 'Ver mais';
+        anim1cont.classList.remove('mostrar1');
+    }else{
+            anim1.innerHTML = 'Ocultar';
+            anim1cont.classList.add('mostrar1');
+            for (var i = 0; i<elementos.length; i++){
+                elementos[i].style.width = '100px';
+                elementos[i].style.height = '100px';
+                elementos[i].style.marginBottom = '20px';
+                if (i == 0){
+                    elementos[i].style.backgroundColor = 'red';
+                }else if (i == 1){
+                    elementos[i].style.backgroundColor = 'black';
+                }else if (i == 2){
+                    elementos[i].style.backgroundColor = 'yellow';
+                } else {
+                    elementos[i].style.backgroundColor = 'green';
+                }
+            }
+        }
+});
+
 
 var box = elementos[3];
 box.addEventListener('click', ()=>{
-    box.classList.add('animacao');
-})*/
+    if(box.classList.contains('animacao')){
+        box.classList.remove('animacao');
+    }else{
+        box.classList.add('animacao');
+    }
+});
 
+//ANIMAÇÃO 2
 var span = document.querySelector('.conteudo span');
-
 span.addEventListener('click', function(){
     var conteudo = document.querySelector('.conteudo p');
 
-    if (conteudo.classList.contains('mostrar')){
+    if (conteudo.classList.contains('mostrar2')){
         span.innerHTML = 'Ver mais';
-        conteudo.classList.remove('mostrar');
+        conteudo.classList.remove('mostrar2');
     }else{
         span.innerHTML = 'Ocultar';
-        conteudo.classList.add('mostrar');
+        conteudo.classList.add('mostrar2');
     }
 });
+//FIM ANIMAÇÃO 2
