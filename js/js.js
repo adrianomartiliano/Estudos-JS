@@ -102,8 +102,6 @@ anim1.addEventListener('click', function(){
             }
         }
 });
-
-
 var box = elementos[3];
 box.addEventListener('click', ()=>{
     if(box.classList.contains('animacao')){
@@ -112,6 +110,7 @@ box.addEventListener('click', ()=>{
         box.classList.add('animacao');
     }
 });
+//FIM ANIMACAO 1
 
 //ANIMAÇÃO 2
 var span = document.querySelector('.conteudo span');
@@ -127,3 +126,28 @@ span.addEventListener('click', function(){
     }
 });
 //FIM ANIMAÇÃO 2
+
+//SLIDE COM VANILLA
+
+var lastIndex = 0;
+var images = document.querySelectorAll('.imagens-slide img');
+
+images.forEach((item,index)=>{
+    document.querySelectorAll('.bolinha')[index].addEventListener('click', ()=>{
+        let lastImage = document.querySelectorAll('.imagens-slide img')[lastIndex];
+        let atualImage = document.querySelectorAll('.imagens-slide img')[index];
+        
+        document.querySelectorAll('.bolinha')[lastIndex]
+        .classList.remove('bolinha-ativa');
+
+        document.querySelectorAll('.bolinha')[index]
+        .classList.add('bolinha-ativa');
+
+        lastImage.style.opacity = 0;
+        atualImage.style.opacity = 1;
+        
+        lastIndex = index;
+    })
+})
+
+//FIM SLIDE COM VANILLA

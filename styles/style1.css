@@ -32,17 +32,16 @@
 .blocos .box{
     float: right;
 }
+.blocos h2 {
+    margin-bottom: 20px;
+}
 #bloco1 p{
     width: 300px;
 }
-.blocos h2 {
-    margin-bottom: 40px;
-}
 .conteudo p {
     overflow: hidden;
-    height: 15px;
+    height: 0;
     transition: 0.5s;
-    margin-top: 30px;
 }
 .mostrar1{
     height: 100% !important; 
@@ -50,3 +49,43 @@
 .mostrar2 {
     height: 80px !important;
 }
+.mostrar3 {
+    height: 100% !important;
+}
+/*SLIDE VANILA*/
+/*.blocos{
+    overflow: hidden;
+    height: 0px;
+} TRECHO DE CÓDIGO QUE SERÁ USADO PARA OCULTAR A ANIMAÇÃO 3*/
+.blocos{
+    text-align: center;
+}
+.bolinha {
+    margin: 0 8px;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: gray;
+}
+.bolinha-ativa {
+    background-color: #333;
+}
+.imagens-slide{
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+}
+.imagens-slide img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500px;
+    height: 400px;
+    opacity: 0;
+    transition: 1s;
+    float: center;
+}
+/*FIM SLIDE VANILLA*/
