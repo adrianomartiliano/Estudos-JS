@@ -40,14 +40,14 @@
 }
 .conteudo p {
     overflow: hidden;
-    height: 0;
+    display: none;
     transition: 0.5s;
 }
 .mostrar1{
     height: 100% !important; 
 }
 .mostrar2 {
-    height: 80px !important;
+    display: flex !important;
 }
 .mostrar3 {
     height: 100% !important;
