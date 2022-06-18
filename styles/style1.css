@@ -88,6 +88,13 @@
     transition: 1s;
     float: center;
 }
+.conteudo-slide div {
+    display: none;
+    background-color: #333;
+}
+.teste1{
+    background-color: aqua;
+}
 /*FIM SLIDE VANILLA*/
 
 /* CALCULADORA */

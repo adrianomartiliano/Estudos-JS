@@ -127,6 +127,19 @@ span.addEventListener('click', function(){
 });
 //FIM ANIMAÇÃO 2
 
+var vermais = document.querySelector('#anime3-slide span');
+vermais.addEventListener('click', function(){
+    var conteudo1 = document.querySelector('.conteudo-slide div');
+
+    if (conteudo1.classList.contains(`conteudo-slide div`)){
+        vermais.innerHTML = 'Ver mais';
+        conteudo1.classList.remove(`conteudo-slide div`);
+    }else{  
+        vermais.innerHTML = 'Ocultar';
+        conteudo1.classList.add(`conteudo-slide div`);
+    }
+});
+
 //SLIDE COM VANILLA
 
 var lastIndex = 0;
