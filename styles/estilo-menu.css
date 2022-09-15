@@ -7,8 +7,11 @@
 */
 
 #menu{
-    width:553px;
+    width:800px;
     margin: 0 auto;
+}
+ul {
+    text-align: center;
 }
 
 #menu li:hover {
