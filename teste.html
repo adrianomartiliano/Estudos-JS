@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-    <section>
+    <!--<section>
         <nav>
             <object data="menu.html" width="100%" height="95px"></object>
         </nav>
@@ -31,8 +31,61 @@
     <div class="conteudo-teste">
         <div class="resultado">Clique Aqui</div>
     </div>
+    <div>
+        Número 1: <input id="n1" type="number"><br>
+        Número 2: <input id="n2" type="number"><br>
+        <input type="button" onclick="somar()" value="SOMAR">
+        <p>RESULTADO</p>
+    </div>
+    Velocidade do Carro: <input type="number" name="velocidad" id="velocidade">
+    <input type="button" value="ENVIAR" onclick="verificar()">
+    <div id="resultado"></div>-->
+
+    Qual seu país? <input type="text" id="pais">
+    <input type="button" value="VERIFICAR" id="acao" >
+    <div id="res"></div>
 </body>
 <script>
+    var res = document.querySelector('#res')
+    var acao = document.querySelector('#acao')
+    acao.addEventListener('click', VerificarNacionalidade)
+    
+    
+    function VerificarNacionalidade(){
+        var pais = document.querySelector('#pais').value;
+        
+        if (pais == 'brasil'){
+            res.innerHTML = "Você é Brasileiro!!";
+        }else {
+            res.innerHTML = "Você é Estrangeiro";
+        }
+    }
+
+
+    /*
+    var resultado = document.querySelector('#resultado');
+
+    function verificar(){
+        var velocidade = document.querySelector('#velocidade');
+        var velocidadeFinal = Number(velocidade.value);
+        if (velocidadeFinal > 60){
+            resultado.innerHTML = `Sua velocidade foi de ${velocidadeFinal}, você foi multado`;
+        } else {
+            resultado.innerHTML = "Dirija com cuidado!";
+        }
+    }
+    
+    function somar(){
+        var n1 = document.querySelector('#n1');
+        var n2 = document.querySelector('#n2');
+        var n11 = Number(n1.value);
+        var n22 = Number(n2.value);
+        var resultado = document.querySelector('p');
+        var soma = n11 + n22;
+        resultado.innerHTML = soma;
+
+    };
+
     var a = document.querySelector('div.resultado');
     var cor = document.querySelector('div.resultado');
     a.addEventListener('click', clicar);
@@ -53,7 +106,6 @@
         cor.style.background = 'red';
     }
 
-    /*
     var p1 = document.getElementsByTagName('p')[1];
     let p2 = document.querySelector('p');
     document.write(p1.innerHTML);
