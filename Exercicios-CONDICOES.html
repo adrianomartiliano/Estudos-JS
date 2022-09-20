@@ -69,7 +69,7 @@
 
     Qual seu país? <input type="text" id="pais">
     <input type="button" value="VERIFICAR" id="acao" >
-    <div id="res"></div>-->
+    <div id="res"></div>-
     <div id="hora-do-dia">
         <h2>HORA DO DIA</h2>
         <div>
@@ -78,11 +78,61 @@
                 <img id="img" src="" alt="">
             </div>
         </div>
+    </div>-->
+    <div id="hora-do-dia">
+        <div>
+            Ano de Nascimento: <input type="number" name="ano" id="anonascimento"><br><br>
+            Sexo: Masculino <input type="radio" value="M" name="sexo" class="sexo"> Feminino <input type="radio" value="F" name="sexo" class="sexo"><br><br>
+            <input type="button" value="Verificar" onclick="verificaridade()">
+            <div id="res"></div>
+        </div>
     </div>
 </body>
 <script>
     var res = document.querySelector('#res')
     var acao = document.querySelector('#acao')
+
+    function verificaridade(){
+        var anonascimento = document.querySelector('#anonascimento').value;
+        var data = new Date();
+        var ano = data.getFullYear();
+        var idade = ano - Number(anonascimento);
+        if (anonascimento >= ano || anonascimento < 1){
+            alert('[ERROR] Verifique os dados e tente novamente!')
+        }else{
+            var sexo = document.getElementsByName('sexo');
+            var genero = '';
+            var paragrafo = document.createElement('p');
+            if (sexo[0].checked){
+                genero = "HOMEM"
+                if (idade > 1 && idade < 11){
+                    paragrafo.innerHTML = "Criança";
+                } else if (idade < 19){
+                    paragrafo.innerHTML = "Jovem";
+                } else if (idade < 50){
+                    paragrafo.innerHTML = "Adulto";
+                } else {
+                    paragrafo.innerHTML = "Idoso";
+                }
+                res.innerHTML = `Detectamos um ${genero} de ${idade} anos`;
+            }else{
+                genero = "MULHER";
+                if (idade > 1 && idade < 11){
+                    paragrafo.innerHTML = "Criança";
+                } else if (idade < 19){
+                    paragrafo.innerHTML = "Jovem";
+                } else if (idade < 50){
+                    paragrafo.innerHTML = "Adulto";
+                } else {
+                    paragrafo.innerHTML = "Idoso";
+                }
+                res.innerHTML = `Detectamos uma ${genero} de ${idade} anos`;
+            }
+            res.appendChild(paragrafo);
+        }
+
+
+    }
 
     /*acao.addEventListener('click', VerificarNacionalidade)
     function VerificarNacionalidade(){
@@ -93,7 +143,7 @@
         }else {
             res.innerHTML = "Você é Estrangeiro";
         }
-    }*/
+    }
     var msg = document.querySelector('p');
     var hora = 8;
     var fundo = document.querySelector('#hora-do-dia');
@@ -112,7 +162,6 @@
     }
 
 
-    /*
     var resultado = document.querySelector('#resultado');
 
     function verificar(){
