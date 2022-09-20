@@ -37,14 +37,14 @@
             padding: 10px;
             border-radius: 10px;
         }
-        #img{
+        img{
             width: 200px;
             height: 200px;
             margin: 20px auto;
-            background-color: blue;
             border-radius: 50%;
             border: 1px solid gray;
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBcdPdUrSs5sjZegwd12Eb7nI-WXeVk52r6DWSQl7EIsbCvpQAhvgXuqBZf_AyZBtyC0&usqp=CAU');
+            /*background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBcdPdUrSs5sjZegwd12Eb7nI-WXeVk52r6DWSQl7EIsbCvpQAhvgXuqBZf_AyZBtyC0&usqp=CAU');
+            */
         }
     </style>
 </head>
@@ -73,9 +73,9 @@
     <div id="hora-do-dia">
         <h2>HORA DO DIA</h2>
         <div>
-            <p>Agora são 16 horas</p>
-            <div id="img">
-
+            <p></p>
+            <div >
+                <img id="img" src="" alt="">
             </div>
         </div>
     </div>
@@ -83,9 +83,8 @@
 <script>
     var res = document.querySelector('#res')
     var acao = document.querySelector('#acao')
-    acao.addEventListener('click', VerificarNacionalidade)
-    
-    
+
+    /*acao.addEventListener('click', VerificarNacionalidade)
     function VerificarNacionalidade(){
         var pais = document.querySelector('#pais').value;
         
@@ -94,6 +93,22 @@
         }else {
             res.innerHTML = "Você é Estrangeiro";
         }
+    }*/
+    var msg = document.querySelector('p');
+    var hora = 8;
+    var fundo = document.querySelector('#hora-do-dia');
+    var divimg = document.querySelector('#img');
+
+    if (hora > 4 && hora < 12){
+        divimg.src = "_img/paisagem1.jpg";
+        msg.innerHTML = `Bom dia, agora são ${hora} horas`;
+        fundo.style.background = '#ff5f9';    
+    } else if(hora < 18){
+        divimg.src = "_img/paisagem2.jpg";
+        msg.innerHTML = `Boa tarde, agora são ${hora} horas`;
+    } else{
+        divimg.src = '_img/paisagem3.jpg';
+        msg.innerHTML = `Boa noite, agora são ${hora} horas`;
     }
 
 
